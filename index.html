@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -9,13 +8,20 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #0e0e0e;
+      background: url("ikso_bg_512.png") no-repeat center center fixed;
+      background-size: cover;
       color: #f2f2f2;
       text-align: center;
+      animation: fadeIn 2s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
     header {
       padding: 2rem;
-      background: #1a1a1a;
+      background: rgba(0, 0, 0, 0.6);
+      animation: fadeIn 2s ease-in 0.5s forwards;
     }
     header h1 {
       font-size: 3rem;
@@ -23,7 +29,7 @@
     }
     header p {
       font-size: 1.2rem;
-      color: #aaa;
+      color: #ccc;
     }
     .logo {
       margin-top: 2rem;
@@ -33,7 +39,10 @@
     .section {
       padding: 2rem 1rem;
       max-width: 800px;
-      margin: 0 auto;
+      margin: 2rem auto;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 1rem;
+      animation: fadeIn 2s ease-in 1s forwards;
     }
     .button {
       background-color: #6c5ce7;
@@ -44,14 +53,30 @@
       font-size: 1.1rem;
       cursor: pointer;
       margin-top: 1rem;
+      transition: transform 0.3s ease, background-color 0.3s ease;
     }
     .button:hover {
       background-color: #a29bfe;
+      transform: scale(1.05);
     }
     footer {
       margin-top: 3rem;
       font-size: 0.9rem;
-      color: #777;
+      color: #bbb;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 1rem;
+    }
+    table {
+      width: 90%;
+      margin: 1rem auto;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #555;
+      padding: 0.75rem;
+    }
+    th {
+      background-color: #333;
     }
   </style>
 </head>
@@ -59,15 +84,30 @@
   <header>
     <h1>IKSO</h1>
     <p>Der Krypto-Kater, den die Blockchain nicht verdient hat – aber braucht.</p>
-    <img class="logo" src="https://example.com/ikso_logo_512x512.png" alt="IKSO Logo">
+    <img class="logo" src="ikso_bg_512.png" alt="IKSO Logo">
   </header>
   <div class="section">
     <h2>Warum IKSO?</h2>
     <p>IKSO ist nicht nur ein Meme-Coin, sondern ein Symbol für Style, Community und Laser-Präzision. Geprägt auf Solana – schnell, leicht, legendär.</p>
     <p><strong>Total Supply:</strong> 10.000.000.000 IKSO<br><strong>Chain:</strong> Solana<br><strong>LP live auf:</strong> Raydium, Birdeye, DexScreener</p>
-    <a href="https://birdeye.so" target="_blank">
+    <a href="https://birdeye.so/token/4joucDaghDcpDYiWxwktwDGjcM21rPfCYWJLPnppEXxX" target="_blank">
       <button class="button">IKSO jetzt handeln</button>
     </a>
+  </div>
+  <div class="section">
+    <h2>💸 Airdrop läuft!</h2>
+    <p>Der Laser-Kater verteilt Tokens! Check deine Wallet – vielleicht hast du Glück!<br>
+    Oder <a href="https://forms.gle/2wTVgdgxuTf7p6bc6" target="_blank" style="color:#a29bfe;">trag dich hier ein</a> für die nächste Runde.</p>
+  </div>
+  <div class="section">
+    <h2>🚀 IKSO Roadmap</h2>
+    <table>
+      <tr><th>Phase</th><th>Status</th><th>Beschreibung</th></tr>
+      <tr><td>Phase 1</td><td>✅ Erledigt</td><td>Token erstellt, LP live, Katze miaut 🐈‍⬛</td></tr>
+      <tr><td>Phase 2</td><td>🚧 Bald</td><td>Airdrop, Website, erste TikToks</td></tr>
+      <tr><td>Phase 3</td><td>🧪 Coming</td><td>NFT-Launch, Community-Quatsch</td></tr>
+      <tr><td>Phase 4</td><td>💣 Moonshot</td><td>IKSO übernimmt die Welt</td></tr>
+    </table>
   </div>
   <footer>
     &copy; 2025 IKSO | #LaserKater #MiauChain
