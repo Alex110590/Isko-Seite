@@ -3,114 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IKSO - Der Krypto-Kater</title>
+  <title>IKSO - Meme Coin</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: url("ikso_bg_512.png") no-repeat center center fixed;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      background-image: url('ikso_background.jpg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
       background-size: cover;
-      color: #f2f2f2;
+      color: white;
       text-align: center;
-      animation: fadeIn 2s ease-in;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      text-shadow: 1px 1px 4px #000;
     }
     header {
-      padding: 2rem;
-      background: rgba(0, 0, 0, 0.6);
-      animation: fadeIn 2s ease-in 0.5s forwards;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 2rem 1rem;
     }
-    header h1 {
+    h1 {
       font-size: 3rem;
       margin: 0;
     }
-    header p {
+    p {
       font-size: 1.2rem;
-      color: #ccc;
-    }
-    .logo {
-      margin-top: 2rem;
-      width: 200px;
-      border-radius: 10px;
-    }
-    .section {
-      padding: 2rem 1rem;
-      max-width: 800px;
-      margin: 2rem auto;
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 1rem;
-      animation: fadeIn 2s ease-in 1s forwards;
+      max-width: 700px;
+      margin: 1rem auto;
     }
     .button {
-      background-color: #6c5ce7;
-      color: white;
-      border: none;
+      background: #111;
+      border: 2px solid white;
       padding: 1rem 2rem;
+      font-size: 1rem;
+      color: white;
       border-radius: 8px;
-      font-size: 1.1rem;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      display: inline-block;
+      margin: 1rem;
       cursor: pointer;
-      margin-top: 1rem;
-      transition: transform 0.3s ease, background-color 0.3s ease;
     }
     .button:hover {
-      background-color: #a29bfe;
-      transform: scale(1.05);
+      background: #333;
+    }
+    .hidden {
+      display: none;
+    }
+    .content-box {
+      background: rgba(0, 0, 0, 0.6);
+      margin: 2rem auto;
+      max-width: 800px;
+      padding: 2rem;
+      border-radius: 12px;
+    }
+    .roadmap h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .roadmap ul {
+      list-style: none;
+      padding: 0;
+    }
+    .roadmap li {
+      margin: 0.8rem 0;
     }
     footer {
       margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #bbb;
-      background: rgba(0, 0, 0, 0.5);
       padding: 1rem;
-    }
-    table {
-      width: 90%;
-      margin: 1rem auto;
-      border-collapse: collapse;
-    }
-    th, td {
-      border: 1px solid #555;
-      padding: 0.75rem;
-    }
-    th {
-      background-color: #333;
+      font-size: 0.9rem;
+      background: rgba(0, 0, 0, 0.4);
     }
   </style>
+  <script>
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      section.classList.toggle('hidden');
+    }
+  </script>
 </head>
 <body>
   <header>
-    <h1>IKSO</h1>
-    <p>Der Krypto-Kater, den die Blockchain nicht verdient hat – aber braucht.</p>
-    <img class="logo" src="ikso_bg_512.png" alt="IKSO Logo">
+    <h1>Willkommen bei IKSO</h1>
+    <p>Der wilde Meme-Coin mit Stil und Krallen. Dezentral. Laut. Anders.</p>
+    <div>
+      <button class="button" onclick="toggleSection('airdrop')">Airdrop anzeigen</button>
+      <button class="button" onclick="toggleSection('roadmap')">Roadmap anzeigen</button>
+      <button class="button" onclick="toggleSection('nfts')">NFTs anzeigen</button>
+    </div>
   </header>
-  <div class="section">
-    <h2>Warum IKSO?</h2>
-    <p>IKSO ist nicht nur ein Meme-Coin, sondern ein Symbol für Style, Community und Laser-Präzision. Geprägt auf Solana – schnell, leicht, legendär.</p>
-    <p><strong>Total Supply:</strong> 10.000.000.000 IKSO<br><strong>Chain:</strong> Solana<br><strong>LP live auf:</strong> Raydium, Birdeye, DexScreener</p>
-    <a href="https://birdeye.so/token/4joucDaghDcpDYiWxwktwDGjcM21rPfCYWJLPnppEXxX" target="_blank">
-      <button class="button">IKSO jetzt handeln</button>
-    </a>
-  </div>
-  <div class="section">
-    <h2>💸 Airdrop läuft!</h2>
-    <p>Der Laser-Kater verteilt Tokens! Check deine Wallet – vielleicht hast du Glück!<br>
-    Oder <a href="https://forms.gle/2wTVgdgxuTf7p6bc6" target="_blank" style="color:#a29bfe;">trag dich hier ein</a> für die nächste Runde.</p>
-  </div>
-  <div class="section">
-    <h2>🚀 IKSO Roadmap</h2>
-    <table>
-      <tr><th>Phase</th><th>Status</th><th>Beschreibung</th></tr>
-      <tr><td>Phase 1</td><td>✅ Erledigt</td><td>Token erstellt, LP live, Katze miaut 🐈‍⬛</td></tr>
-      <tr><td>Phase 2</td><td>🚧 Bald</td><td>Airdrop, Website, erste TikToks</td></tr>
-      <tr><td>Phase 3</td><td>🧪 Coming</td><td>NFT-Launch, Community-Quatsch</td></tr>
-      <tr><td>Phase 4</td><td>💣 Moonshot</td><td>IKSO übernimmt die Welt</td></tr>
-    </table>
-  </div>
+
+  <section id="airdrop" class="content-box hidden">
+    <h2>Airdrop</h2>
+    <p>Sei Teil der ersten Welle! Trage dich hier ein und sichere dir deinen Platz im IKSO-Ökosystem.</p>
+    <a class="button" href="https://forms.gle/NEUEN_AIRDROP_LINK" target="_blank">Jetzt teilnehmen</a>
+  </section>
+
+  <section id="roadmap" class="content-box hidden roadmap">
+    <h2>Roadmap</h2>
+    <ul>
+      <li>✨ Launch von IKSO auf Solana</li>
+      <li>💳 Liquidity Pool auf Raydium</li>
+      <li>🚀 Airdrop für frühe Unterstützer</li>
+      <li>🎨 NFT-Kollektion mit Kater-Style</li>
+      <li>🌟 Community-Governance und Memetic Power</li>
+      <li>🌐 Website & TikTok-Kampagne</li>
+    </ul>
+  </section>
+
+  <section id="nfts" class="content-box hidden">
+    <h2>Unsere NFT-Kollektion</h2>
+    <p>Exklusive Katzen-NFTs im einzigartigen IKSO-Stil. Bezahle mit dem IKSO-Token und sichere dir deinen Platz in der Katzenarmee!</p>
+    <a class="button" href="https://example.com/mint" target="_blank">Zum NFT-Mint</a>
+  </section>
+
   <footer>
-    &copy; 2025 IKSO | #LaserKater #MiauChain
+    &copy; 2025 IKSO Project. Alle Rechte vorbehalten.
   </footer>
 </body>
 </html>
